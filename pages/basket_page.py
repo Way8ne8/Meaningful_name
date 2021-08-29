@@ -4,7 +4,7 @@ from selenium import webdriver
 
 
 class BasketPage(BasePage):
-    def should_be_login_page(self):
+    def should_be_basket_page(self):
         self.should_be_basket_in_url()
         self.should_be_empty_basket()
         self.should_be_text_empty_basket()
