@@ -2,10 +2,12 @@ from selenium.webdriver.common.by import By
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.CSS_SELECTOR, ".btn-group a.btn")
 
-# class MainPageLocators():
-#     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+class BasketPageLocators():
+    BASKET_EMPTY = (By.CSS_SELECTOR, '#content_inner')
+    BASKET_EMPTY_TEXT = (By.XPATH, "//*[@id='content_inner']/p/text()")
+    # BASKET_EMPTY_TEXT = (By.XPATH, "div #content_inner p:first-child a")
 
 class LoginPageLocators():
     REG_LINK = (By.CSS_SELECTOR, "#register_form")
