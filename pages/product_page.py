@@ -4,7 +4,9 @@ from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
     def add_to_basket(self):
+        assert self.browser.find_element(*ProductPageLocators.ADD_LINK), "Нет кнопки Добавить в корзину"
         self.browser.find_element(*ProductPageLocators.ADD_LINK).click()
+        self.check_messages()
 
     def check_messages(self):
         assert self.is_element_present(*ProductPageLocators.ADD_SUCC_MESSAGE), "Нет сообщения об успешном добавлении"

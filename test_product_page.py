@@ -1,6 +1,7 @@
 from .pages.product_page import ProductPage
 from .pages.base_page import BasePage
 from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
 import pytest
 import time
 
@@ -24,6 +25,8 @@ class TestBasketGuest():
         page = BasePage(browser, link)
         page.open()
         page.go_to_basket_page()
+        basket_page = BasketPage(browser, browser.current_url)
+        basket_page.should_be_basket_page()
 
     def test_guest_can_go_to_basket_from_main_page(self, browser):
         link = link_main_page
@@ -62,7 +65,8 @@ class TestLoginFromMainPage():
         page = ProductPage(browser, link)
         page.open()
         page.go_to_login_page()
-
+        login_page = LoginPage(browser, browser.current_url)
+        login_page.should_be_login_page()
 
 @pytest.mark.test_basket_user
 class TestUserAddToBasketFromProductPage():

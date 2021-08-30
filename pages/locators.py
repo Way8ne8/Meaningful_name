@@ -8,8 +8,8 @@ class BasePageLocators():
 
 
 class BasketPageLocators():
-    BASKET_EMPTY = (By.CSS_SELECTOR, '#content_inner')
-    BASKET_EMPTY_TEXT = (By.XPATH, "//*[@id='content_inner']/p/text()")
+    BASKET_EMPTY = (By.CSS_SELECTOR, '#basket_formset')
+    BASKET_EMPTY_TEXT = (By.XPATH, "//*[text()[contains(.,'Your basket is empty.')]]")
 
 
 class LoginPageLocators():
