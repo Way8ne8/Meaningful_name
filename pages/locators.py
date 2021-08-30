@@ -9,7 +9,7 @@ class BasePageLocators():
 
 class BasketPageLocators():
     BASKET_EMPTY = (By.CSS_SELECTOR, '#basket_formset')
-    BASKET_EMPTY_TEXT = (By.XPATH, "//*[text()[contains(.,'Your basket is empty.')]]")
+    BASKET_EMPTY_TEXT = (By.XPATH, "//*[text()[contains(.,'Your basket is empty.')]]") # проверяем только en версию
 
 
 class LoginPageLocators():
